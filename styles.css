@@ -97,8 +97,7 @@ img {
 
 .welcome-section img {
   margin-bottom: 3rem;
-  width: 350px;
-  height: 350px;
+  width: calc(20% - 6.5rem);
   object-fit: cover;
   border-radius: 50%;
   border: 5px solid var(--main-gray);
