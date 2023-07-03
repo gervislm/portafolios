@@ -1,7 +1,7 @@
 :root {
   --main-white: #fff;
   --main-black: #000;
-  --main-gray: #AEB6BF;
+  --main-gray: #aeb6bf;
 }
 
 * {
@@ -9,7 +9,9 @@
   padding: 0;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -27,7 +29,8 @@ body {
   color: var(--main-white);
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   text-align: center;
@@ -89,7 +92,15 @@ img {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(70deg, #1C2833 0%, #566573 100%);
+  background-image: linear-gradient(70deg, #1c2833 0%, #566573 100%);
+}
+
+.welcome-section img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--main-gray);
 }
 
 .welcome-section > p {
@@ -102,19 +113,19 @@ img {
 .projects-section {
   text-align: center;
   padding: 10rem 2rem;
-  background-image: linear-gradient(70deg, #424949  0%, #B2BABB 100%);
+  background-image: linear-gradient(70deg, #424949 0%, #b2babb 100%);
 }
 
 .projects-section-header {
   max-width: 640px;
-  margin: 0 auto 8rem auto;
+  margin: 0 auto 4rem auto;
   border-bottom: 2px solid var(--main-white);
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 4rem;
+  grid-gap: 2rem;
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
@@ -137,7 +148,7 @@ img {
 }
 
 .project-image {
-  height: calc(100% - 6.5rem);
+  height: calc(280px - 6.5rem);
   width: 100%;
   object-fit: cover;
 }
