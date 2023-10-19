@@ -119,6 +119,7 @@ img {
 }
 
 .projects-section {
+  height: 100vh;
   text-align: center;
   padding: 10rem 2rem;
   background-image: linear-gradient(70deg, #424949 0%, #b2babb 100%);
@@ -205,7 +206,7 @@ img {
 }
 
 .contact-details:hover {
-  transform: translateY(8px);
+  transform: translateY(-8px);
 }
 
 @media screen and (max-width: 720px) {
@@ -217,8 +218,18 @@ img {
     border: 2px solid var(--main-white);
   }
 
+  .projects-section {
+    height: 100%;
+  }
+
   .project-image {
     width: 100%;
     object-fit: cover;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
