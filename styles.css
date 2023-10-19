@@ -209,3 +209,18 @@ img {
 .contact-details:hover {
   transform: translateY(8px);
 }
+
+@media screen and (max-width: 720px) {
+  .welcome-section img {
+    margin-bottom: 3rem;
+    width: calc(70% - 1.5rem);
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--main-white);
+  }
+
+  .project-image {
+    width: 100%;
+    object-fit: cover;
+  }
+}
