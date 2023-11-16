@@ -37,19 +37,19 @@ h2 {
 }
 
 #main-name {
-  color: #bfbfbf;
+  font-size: 5rem;
+  text-shadow: 2px 2px 2px #1f1f1f;
+  color: var(--main-white);
 }
 
 .subtitle {
-  color: aliceblue;
-}
-
-h1 {
-  font-size: 6rem;
+  font-weight: 500;
+  color: var(--main-gray);
 }
 
 h2 {
   font-size: 4.2rem;
+  text-shadow: 1px 1px 4px #1f1f1f;
 }
 
 ul {
@@ -61,10 +61,10 @@ a {
   color: var(--main-white);
 }
 
-img {
+/* img {
   display: block;
   width: 100%;
-}
+} */
 
 .nav {
   display: flex;
@@ -93,29 +93,48 @@ img {
   background: var(--main-gray);
 }
 
-.welcome-section {
+.welcome-section-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 0 10px;
+  background-image: linear-gradient(70deg, #1c2833 0%, #566573 100%);
+}
+
+.welcome-section-left,
+.welcome-section-right {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
-  background-image: linear-gradient(70deg, #1c2833 0%, #566573 100%);
 }
 
-.welcome-section img {
-  margin-bottom: 3rem;
-  width: calc(20% - 6.5rem);
+.welcome-section-left img {
+  margin-bottom: 2rem;
+  width: calc(50% - 6rem);
   object-fit: cover;
   border-radius: 50%;
-  border: 5px solid var(--main-gray);
+  border: solid 3px var(--main-white);
+  box-shadow: 2px 2px 3px var(--main-black);
 }
 
-.welcome-section > p {
+.welcome-section-right h3 {
+  margin-top: 10px;
+  font-size: 4rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 3px var(--main-black);
+  color: var(--main-white);
+}
+
+.welcome-section-right p {
+  margin-top: 10px;
   font-size: 3rem;
-  font-weight: 400;
   font-style: italic;
-  color: var(--main-gray);
+  text-shadow: 2px 2px 4px var(--main-black);
+  color: var(--main-white);
 }
 
 .projects-section {
@@ -128,7 +147,6 @@ img {
 .projects-section-header {
   max-width: 640px;
   margin: 0 auto 4rem auto;
-  border-bottom: 2px solid var(--main-white);
 }
 
 .projects-grid {
@@ -170,6 +188,10 @@ img {
 .btn {
   display: inline-block;
   padding: 1rem 1.5rem;
+  background-color: #566573;
+  border-radius: 5px;
+  margin: 4px;
+  box-shadow: -2px -2px 1px #1f1f1fd5;
 }
 
 .contact-section {
@@ -177,6 +199,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-content: space-between;
   text-align: center;
   width: 100%;
   height: 100vh;
@@ -191,11 +214,10 @@ img {
 
 .contact-links {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
   max-width: 980px;
   margin-top: 4rem;
-  flex-wrap: wrap;
 }
 
 .contact-details {
@@ -206,30 +228,66 @@ img {
 }
 
 .contact-details:hover {
-  transform: translateY(-8px);
+  box-shadow: 2px 2px 2px #1f1f1fd5;
+  transform: translateY(-5px);
 }
 
-@media screen and (max-width: 720px) {
-  .welcome-section img {
-    margin-bottom: 3rem;
-    width: calc(70% - 1.5rem);
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid var(--main-white);
+/*Footer styles*/
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  position: relative;
+  bottom: 1;
+}
+
+.languages,
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* Settings for small screens */
+
+@media screen and (max-width: 1500px) {
+  .welcome-section-right h3 {
+    font-size: 2.5rem;
   }
 
-  .projects-section {
-    height: 100%;
+  .welcome-section-right p {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #main-name {
+    font-size: 3rem;
   }
 
-  .project-image {
-    width: 100%;
-    object-fit: cover;
+  h2 {
+    font-size: 2rem;
+    padding-bottom: 20px;
   }
-
-  .contact-links {
+  .welcome-section-left img {
+    margin-bottom: 1rem;
+    width: calc(40% - 2rem);
+  }
+  .welcome-section-wrapper {
     display: flex;
+
     flex-direction: column;
-    align-items: center;
+  }
+
+  .welcome-section-right h3 {
+    font-size: 2rem;
+  }
+
+  .welcome-section-right p {
+    font-size: 1.5rem;
+    padding: 10px;
   }
 }
