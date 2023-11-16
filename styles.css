@@ -131,6 +131,7 @@ a {
 
 .welcome-section-right p {
   margin-top: 10px;
+  padding-right: 10px;
   font-size: 3rem;
   font-style: italic;
   text-shadow: 2px 2px 4px var(--main-black);
